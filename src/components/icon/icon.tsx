@@ -33,6 +33,11 @@ export class Icon {
   @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
   /**
+   * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+   */
+  @Prop({reflect: true}) ariaHidden?: string;
+
+  /**
    * Specifies which icon to use on `ios` mode.
    */
   @Prop() ios?: string;
@@ -130,7 +135,7 @@ export class Icon {
       }
     }
 
-    if (!this.ariaLabel) {
+    if (!this.ariaLabel && this.ariaHidden !== 'true') {
       const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name

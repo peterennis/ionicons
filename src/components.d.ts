@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IonIcon {
         /**
+          * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+         */
+        "ariaHidden"?: string;
+        /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
          */
         "ariaLabel"?: string;
@@ -66,6 +70,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IonIcon {
+        /**
+          * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+         */
+        "ariaHidden"?: string;
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
          */
