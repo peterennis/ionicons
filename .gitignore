@@ -10,12 +10,17 @@ log.txt
 .idea/
 .versions/
 .vscode/
-components/
+/components/
 node_modules/
 tmp/
 dist/
 icons/
 .DS_Store
 scripts/*.js
+!scripts/install-loader.js
 
 www/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/src/**/*-snapshots
